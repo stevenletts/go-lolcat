@@ -57,7 +57,7 @@ func main() {
 			printColoredChar(&output, string(runeValue), j)
 			j++
 		}
-		output.WriteString("\n") // Ensure new line after each line
+		output.WriteString("\n")
 	}
 	fmt.Print(output.String())
 }
