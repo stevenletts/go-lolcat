@@ -18,7 +18,7 @@ func rgb(i int) (int, int, int) {
 
 func printColoredChar(output *strings.Builder, char string, j int) {
 	r, g, b := rgb(j)
-	output.WriteString(fmt.Sprintf("\033[38;2;%d;%d;%dm%s\033[0m", r, g, b, char))
+	fmt.Fprintf(output, "\033[38;2;%d;%d;%dm%s\033[0m", r, g, b, char)
 }
 
 func main() {
